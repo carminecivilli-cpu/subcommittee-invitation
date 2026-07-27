@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Respond to an invitation to help shape the future of the robotic theatre team."
+    />
+    <meta name="theme-color" content="#f3f0ea" />
+    <title>Professional Working Group Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="invitation-shell">
+      <div class="network" aria-hidden="true">
+        <span class="wash wash-one"></span>
+        <span class="wash wash-two"></span>
+        <span class="wash wash-three"></span>
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+        <span class="orbit orbit-three"></span>
+        <span class="connection connection-one"></span>
+        <span class="connection connection-two"></span>
+        <span class="connection connection-three"></span>
+        <span class="connection connection-four"></span>
+        <span class="node node-one"></span>
+        <span class="node node-two"></span>
+        <span class="node node-three"></span>
+        <span class="node node-four"></span>
+        <span class="node node-five"></span>
+        <span class="node node-six"></span>
+        <span class="node node-seven"></span>
+        <span class="node node-eight"></span>
+      </div>
+
+      <header class="brand-mark">
+        <span class="brand-dots" aria-hidden="true">
+          <span class="brand-dot burgundy"></span>
+          <span class="brand-dot sage"></span>
+        </span>
+        <span id="brand-label">BIARGS · EXTENDED SURGICAL TEAM</span>
+      </header>
+
+      <section class="invitation-panel" id="invitation-panel" aria-live="polite">
+        <div id="invitation-view">
+          <p class="eyebrow" id="eyebrow">Robotic gynaecology</p>
+          <h1>
+            An invitation to help shape the future of the robotic theatre team
+          </h1>
+          <p class="intro-copy" id="description"></p>
+
+          <div class="commitment-card">
+            <span class="commitment-symbol" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span>
+            </span>
+            <p>
+              <strong>Initial commitment</strong>
+              <span class="divider" aria-hidden="true">·</span>
+              One 45–60 minute exploratory meeting
+            </p>
+          </div>
+
+          <p class="error-message" id="error-message" role="alert" hidden>
+            We could not record your response. Please try again.
+          </p>
+
+          <div class="action-row">
+            <button class="primary-button" id="accept-button">
+              Accept invitation
+            </button>
+            <button class="secondary-button" id="decline-button">Decline</button>
+          </div>
+
+          <p class="privacy-note">
+            Your response will be used only to organise this invitation and
+            initial meeting.
+          </p>
+        </div>
+
+        <div class="confirmation-card" id="decline-confirmation" role="dialog" hidden>
+          <p class="eyebrow">Please confirm</p>
+          <h1>Decline this invitation?</h1>
+          <p class="confirmation-copy">
+            No explanation is required. You can simply let us know that you are
+            unable to participate at this stage.
+          </p>
+          <div class="action-row">
+            <button class="primary-button" id="confirm-decline">
+              Confirm decline
+            </button>
+            <button class="secondary-button" id="cancel-decline">Go back</button>
+          </div>
+        </div>
+
+        <div class="confirmation-card" id="response-confirmation" hidden>
+          <span class="confirmation-icon" id="confirmation-icon" aria-hidden="true"
+            >✓</span
+          >
+          <p class="eyebrow" id="confirmation-eyebrow">Invitation accepted</p>
+          <h1 id="confirmation-heading">Thank you for joining us.</h1>
+          <p class="confirmation-copy" id="confirmation-copy"></p>
+          <p class="preview-notice" id="preview-notice" hidden>
+            Preview mode: the response service will be connected in the next
+            stage.
+          </p>
+          <button class="text-button" id="change-response">
+            Change response
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
