@@ -49,12 +49,53 @@
         <span id="brand-label">BIARGS · EXTENDED SURGICAL TEAM</span>
       </header>
 
-      <section class="invitation-panel" id="invitation-panel" aria-live="polite">
-        <div id="invitation-view">
+      <section class="invitation-panel" aria-live="polite">
+        <div class="access-card" id="pin-view">
+          <p class="eyebrow">Private invitation</p>
+          <h1>Enter your invitation PIN</h1>
+          <p class="intro-copy">
+            Please enter the unique PIN included in your invitation email.
+          </p>
+          <form id="pin-form">
+            <label class="pin-label" for="pin-input">Invitation PIN</label>
+            <input
+              class="pin-input"
+              id="pin-input"
+              name="pin"
+              type="text"
+              inputmode="text"
+              autocomplete="one-time-code"
+              autocapitalize="characters"
+              maxlength="12"
+              placeholder="Enter PIN"
+              required
+            />
+            <p class="error-message" id="pin-error" role="alert" hidden></p>
+            <button class="primary-button access-button" id="verify-button" type="submit">
+              Continue securely
+            </button>
+          </form>
+          <p class="privacy-note">
+            Your PIN is checked privately and is not stored by this webpage.
+          </p>
+        </div>
+
+        <div class="confirmation-card" id="identity-view" hidden>
+          <span class="confirmation-icon" aria-hidden="true">✓</span>
+          <p class="eyebrow">Identity check</p>
+          <h1>Welcome, <span id="participant-name"></span>.</h1>
+          <p class="confirmation-copy">Is this you?</p>
+          <div class="action-row">
+            <button class="primary-button" id="confirm-identity">Yes, continue</button>
+            <button class="secondary-button" id="reject-identity">
+              No, this is not me
+            </button>
+          </div>
+        </div>
+
+        <div id="invitation-view" hidden>
           <p class="eyebrow" id="eyebrow">Robotic gynaecology</p>
-          <h1>
-            An invitation to help shape the future of the robotic theatre team
-          </h1>
+          <h1>An invitation to help shape the future of the robotic theatre team</h1>
           <p class="intro-copy" id="description"></p>
 
           <div class="commitment-card">
@@ -74,15 +115,13 @@
           </p>
 
           <div class="action-row">
-            <button class="primary-button" id="accept-button">
-              Accept invitation
-            </button>
+            <button class="primary-button" id="accept-button">Accept invitation</button>
             <button class="secondary-button" id="decline-button">Decline</button>
           </div>
 
           <p class="privacy-note">
-            Your response will be used only to organise this invitation and
-            initial meeting.
+            Your response will be used only to organise this invitation and initial
+            meeting.
           </p>
         </div>
 
@@ -94,27 +133,17 @@
             unable to participate at this stage.
           </p>
           <div class="action-row">
-            <button class="primary-button" id="confirm-decline">
-              Confirm decline
-            </button>
+            <button class="primary-button" id="confirm-decline">Confirm decline</button>
             <button class="secondary-button" id="cancel-decline">Go back</button>
           </div>
         </div>
 
         <div class="confirmation-card" id="response-confirmation" hidden>
-          <span class="confirmation-icon" id="confirmation-icon" aria-hidden="true"
-            >✓</span
-          >
+          <span class="confirmation-icon" id="confirmation-icon" aria-hidden="true">✓</span>
           <p class="eyebrow" id="confirmation-eyebrow">Invitation accepted</p>
           <h1 id="confirmation-heading">Thank you for joining us.</h1>
           <p class="confirmation-copy" id="confirmation-copy"></p>
-          <p class="preview-notice" id="preview-notice" hidden>
-            Preview mode: the response service will be connected in the next
-            stage.
-          </p>
-          <button class="text-button" id="change-response">
-            Change response
-          </button>
+          <button class="text-button" id="change-response">Change response</button>
         </div>
       </section>
     </main>
